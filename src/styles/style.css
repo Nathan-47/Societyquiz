@@ -94,7 +94,7 @@ select:focus-visible {
     cursor: pointer;
     padding: 2rem; 
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 #answerABtn:hover, #answerBBtn:hover {
@@ -104,6 +104,30 @@ select:focus-visible {
     transition: 0.2s;
 }
 .button-wrapper {gap: 1rem;}
+
+
+/* society listings */
+.society-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.society-card {
+  padding: 1rem;
+  text-align: center;
+  background: white;
+    border-radius: 15px;
+    -webkit-box-shadow: 2px 2px 15px 1px rgb(156 156 156 / 30%);
+    box-shadow: 2px 2px 15px 1px rgb(156 156 156 / 30%);
+}
+.society-card img {
+    width: 100px;
+    height: auto;
+    margin: 10px auto;
+}
+
+
 
 
 
