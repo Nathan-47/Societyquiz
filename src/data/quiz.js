@@ -29,7 +29,7 @@ const socData = [
         question: "What kind of people do you hope to meet?",
         id: 3,
         answerA: "Passionate creators/students that are into gaming, media, film, photography, podcasting",
-        linkA: "http://127.0.0.1:5500/src/pages/results.html?category=GeneralInterest",
+        linkA: "http://127.0.0.1:5500/src/pages/results.html?category=General",
         answerB: "People who share niche interests or quirky hobbies",
         linkB: "https://www.bcusu.com/get-involved/start-a-society/",
     },
@@ -57,6 +57,6 @@ const socData = [
         answerA: "A space to connect over shared heritage, background, or faith",
         linkA: "http://127.0.0.1:5500/src/pages/results.html?category=Faith",
         answerB: "I dont't know yet, still figuring it out",
-        linkA: "http://127.0.0.1:5500/src/pages/results.html?category=Adopt",
+        linkB: "http://127.0.0.1:5500/src/pages/results.html?category=Adopt",
     },
 ]
