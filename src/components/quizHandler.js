@@ -2,10 +2,13 @@
 let currentQuestion = socData[0];
 
 function matchAnswer(answerText) {
+    // Try to find a URL starting with http:// or https:// in the answerText
     const urlMatch = answerText.match(/(https?:\/\/[^\s]+)/);
     if (!urlMatch) return answerText;
 
     const url = urlMatch[0];
+
+    // Remove the URL from the answerText, then remove a trailing colon and whitespace if any, and trim extra spaces
     const label = answerText.replace(url, '').replace(/:\s*$/, '').trim();
     return `<a href="${url}">${label}</a>`;
 }
@@ -14,15 +17,18 @@ function matchAnswer(answerText) {
 // Question handler function
 const displayQuestion = (questionData) => {    
     
-    // Display question text
-    document.getElementById("question").textContent = questionData.question;
+// Display question text
+document.getElementById("question").textContent = questionData.question;
 
 // Button A
 const answerABtn = document.getElementById("answerABtn");
 if (questionData.answerA) {
+    // convert answerA data to HTML using matchAnswer function
     const answerHTML = matchAnswer(questionData.answerA);
     answerABtn.innerHTML = answerHTML;
     answerABtn.onclick = () => {
+        
+        // If there is a linkA property, navigate the browser to that URL
         if (questionData.linkA) {
             window.location.href = questionData.linkA;
         } else {
@@ -58,11 +64,8 @@ const handleAnswer = (idNextQuestion) => {
     const nextQuestion = socData.find(q => q.id === idNextQuestion);
     if (nextQuestion) {
         currentQuestion = nextQuestion;
-
-        // Show the next question when nextQuestion value
         displayQuestion(nextQuestion); 
     }
 }
 
-// Start the quiz by displaying the first question
 displayQuestion(currentQuestion);
