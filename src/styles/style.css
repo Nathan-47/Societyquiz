@@ -60,15 +60,6 @@ select:focus-visible {
     font-family: "Poppins", sans-serif;
     font-size: 0.9rem;
 }
-.mobile-swipe {
-    display: none;
-    font-style: italic;
-    margin-bottom: 0.5em;
-}
-.mobile-swipe img {
-    width: 20px !important;
-    margin-right: 5px !important;
-}
 
 
 /* AOS  */
@@ -241,10 +232,6 @@ select:focus-visible {
 
 @media screen and (max-width: 768px) {
 .wrapper img {width: 500px;}
-}
-
-@media screen and (max-width: 720px) {
-.mobile-swipe {display: block;}
 }
 
 @media screen and (max-width: 600px) {
