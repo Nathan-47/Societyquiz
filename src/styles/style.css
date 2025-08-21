@@ -119,9 +119,6 @@ select:focus-visible {
 }
 
 
-
-
-
 /* resutls */
 .result {
     margin-top: 20px;
@@ -174,6 +171,7 @@ select:focus-visible {
   background-color: #F4AA82;
   color: #292929;
 }
+.society-heading {margin-bottom: 2em;}
 
 
 /* start screen */
