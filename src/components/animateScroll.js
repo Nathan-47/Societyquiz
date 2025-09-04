@@ -1,6 +1,6 @@
 // Observer only for certain mobile width
 function isMobile() {
-  return window.innerWidth >= 720;
+  return window.innerWidth < 720;
 }
 
 // Check for elements on page load
@@ -32,13 +32,21 @@ function runIntersectionObserver(options = {}) {
 
   const hiddenEls = document.querySelectorAll('.container');
   hiddenEls.forEach((el) => observer.observe(el));
+
+  // used to help with force the check for all elements on page
+  hiddenEls.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('show');
+    }
+  });
 }
 
 
 // Run observer for mobile if not meet width size, then desktop
 if (isMobile()) {
   // Use rootMargin to trigger earlier on mobile
-  runIntersectionObserver({ rootMargin: '0px 0px -20% 0px',  threshold: 0 });
+  runIntersectionObserver({ rootMargin: '0px 0px -20% 0px'});
 } else {
   const hiddenEls = document.querySelectorAll('.container');
   hiddenEls.forEach((el) => el.classList.add('show'));
