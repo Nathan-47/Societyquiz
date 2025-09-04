@@ -63,16 +63,14 @@ select:focus-visible {
 
 
 /* AOS  */
-.container {
-    opacity: 0;
-    filter: blur(0.5px);
-    transform: translateY(100%);
+.fade {
+  opacity: 0;
+  transform: translateY(20px); 
 }
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateZ(0);
-    transition: all 1s ease-in-out;
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 
