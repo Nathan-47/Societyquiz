@@ -38,7 +38,7 @@ function runIntersectionObserver(options = {}) {
 // Run observer for mobile if not meet width size, then desktop
 if (isMobile()) {
   // Use rootMargin to trigger earlier on mobile
-  runIntersectionObserver({ rootMargin: '0px 0px -20% 0px' });
+  runIntersectionObserver({ rootMargin: '0px 0px -20% 0px',  threshold: 0 });
 } else {
   const hiddenEls = document.querySelectorAll('.container');
   hiddenEls.forEach((el) => el.classList.add('show'));
