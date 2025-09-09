@@ -20,6 +20,7 @@ const displayQuestion = (questionData) => {
 // Display question text
 document.getElementById("question").textContent = questionData.question;
 
+
 // Button A
 const answerABtn = document.getElementById("answerABtn");
 if (questionData.answerA) {
@@ -38,6 +39,7 @@ if (questionData.answerA) {
 } else {
     answerABtn.style.display = 'none';
 }
+
 
 // Button B
 const answerBBtn = document.getElementById("answerBBtn");
@@ -58,7 +60,7 @@ if (questionData.answerB) {
 };
 
 
-// Handle answer button click
+// Handle answer function
 const handleAnswer = (idNextQuestion) => {
     // find next question via id tag
     const nextQuestion = socData.find(q => q.id === idNextQuestion);
