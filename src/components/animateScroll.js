@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   elements.forEach(el => observer.observe(el));
 
-// Show the elements in an instant 
+// Show the elements in an instant once page has loaded
   elements.forEach(el => {
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom > 0) {
