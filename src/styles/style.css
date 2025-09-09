@@ -17,7 +17,6 @@ select:focus-visible {
     color: #292929;
     transition: outline-color 0.2s ease, background-color 0.2s ease;
 }
-
 .quiz-container {
     max-width: 600px;
     margin: 0 auto;
@@ -35,11 +34,10 @@ select:focus-visible {
     font-size: 2rem;
 }
 .question {
-    font-size: 1.4rem !important; 
+    font-size: 1.35rem !important; 
     margin-bottom: 1.8em !important;
     margin-top: 1.6em;
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
 }
 .image {
     width: 100%;
@@ -60,6 +58,13 @@ select:focus-visible {
     font-family: "Poppins", sans-serif;
     font-size: 0.9rem;
 }
+.quiz-logo {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: -1.5em;
+    margin-top: 1.5em;
+}
 
 
 /* AOS  */
@@ -79,20 +84,25 @@ select:focus-visible {
     background: #292929;
     color: #fafafa;
     margin: 5px;
+    border: 2px solid #292929;
     display: flex;
     cursor: pointer;
-    padding: 2rem; 
+    padding: 1.4rem; 
     border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1rem;
+    /* font-weight: 700; */
 }
 #answerABtn:hover, #answerBBtn:hover {
-    background: #fafafa;
+    background: none;
     color: #292929;
-    border: 1px solid #292929;
+    border: 2px solid #292929;
     transition: 0.2s;
 }
-.button-wrapper {gap: 1rem;}
+.button-wrapper {
+    gap: 1rem;
+    width: 60%;
+    display: inline-block;
+}
 
 
 /* society listings */
@@ -106,18 +116,38 @@ select:focus-visible {
   padding: 1rem;
   text-align: center;
   background: white;
-    border-radius: 15px;
-    -webkit-box-shadow: 2px 2px 15px 1px rgb(156 156 156 / 30%);
-    box-shadow: 2px 2px 15px 1px rgb(156 156 156 / 30%);
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 15px 1px rgb(156 156 156 / 30%);
+  box-shadow: 2px 2px 15px 1px rgb(156 156 156 / 30%);
+}
+.society-card h3 {
+    font-weight: 600;
+    font-family: 'poppins';
 }
 .society-card img {
     width: 100px;
     height: auto;
     margin: 10px auto;
 }
+.society-card a {
+    font-weight: 600;
+    font-family: 'poppins';
+    font-size: 1rem;
+    background: #fff793;
+    margin-top: 1em;
+}
 
 
 /* resutls */
+.quiz-restart {
+    margin-bottom: 3em;
+    padding: 5px;
+    border-radius: 5px;
+    background: #fff793;
+    color: #292929;
+    font-weight: 700;
+    font-family: 'poppins';
+}
 .result {
     margin-top: 20px;
     font-size: 18px;
@@ -169,7 +199,10 @@ select:focus-visible {
   background-color: #F4AA82;
   color: #292929;
 }
-.society-heading {margin-bottom: 2em;}
+.society-heading {
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 1em;
+}
 
 
 /* start screen */
@@ -248,9 +281,7 @@ select:focus-visible {
     grid-template-columns: repeat(2, 1fr);
     gap: 2px;
 }
-.start-wrapper {
-    margin-top: 1em !important;
-}
+.start-wrapper {margin-top: 1em !important;}
 .restartBtn {width: 60%;}
 }
 
@@ -276,6 +307,7 @@ select:focus-visible {
 @media screen and (max-width: 400px) {
 .pic-img {width: 300px !important;}
 .restartBtn {width: 100%;}
+.society-card img {display: flex;}
 }
 
 @media screen and (max-width: 360px) {
