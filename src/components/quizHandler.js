@@ -7,7 +7,7 @@ function matchAnswer(answerText) {
     if (!urlMatch) return answerText;
 
     const url = urlMatch[0];
-
+    
     // Remove the URL from the answerText, then remove a trailing colon and whitespace if any, and trim extra spaces
     const label = answerText.replace(url, '').replace(/:\s*$/, '').trim();
     return `<a href="${url}">${label}</a>`;
