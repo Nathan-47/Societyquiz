@@ -48,7 +48,7 @@ const socData = [
         id: 5,
         answerA: "Course specific events, academic help, or career networking",
         linkA: "http://127.0.0.1:5500/src/pages/results.html?category=Academic",
-        answerB: "use your skills to inspire others and make change",
+        answerB: "Use your skills to inspire others and make change",
         linkB: "http://127.0.0.1:5500/src/pages/results.html?category=Liberation",
     },
     {
