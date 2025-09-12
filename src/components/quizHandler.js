@@ -34,7 +34,7 @@ if (questionData.answerA) {
             let target = question.linkA;
 
             if (!target.startsWith("http")) {
-                target = "../data/" + target; 
+                target = "../data/pages" + target; 
             }
             window.location.href = target;
         } else {
@@ -43,7 +43,7 @@ if (questionData.answerA) {
     };
 } else {
     answerABtn.style.display = 'none';
-     
+
 }
 
 
@@ -54,10 +54,10 @@ if (questionData.answerB) {
     answerBBtn.innerHTML = answerHTML;
     answerBBtn.onclick = () => {
         if (questionData.linkB) {
-            let target = question.linkBy;
+            let target = question.linkB;
 
             if (!target.startsWith("http")) {
-                target = "../data/" + target; 
+                target = "../data/pages" + target; 
             }
             window.location.href = target;
         } else {
