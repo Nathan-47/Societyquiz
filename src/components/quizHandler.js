@@ -34,7 +34,7 @@ if (questionData.answerA) {
             let target = question.linkA;
 
             if (!target.startsWith("http")) {
-                target = "../data/pages" + target; 
+                target = "../pages" + target; 
             }
             window.location.href = target;
         } else {
@@ -57,7 +57,7 @@ if (questionData.answerB) {
             let target = question.linkB;
 
             if (!target.startsWith("http")) {
-                target = "../data/pages" + target; 
+                target = "../pages" + target; 
             }
             window.location.href = target;
         } else {
