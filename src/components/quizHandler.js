@@ -42,7 +42,8 @@ if (questionData.answerA) {
         }
     };
 } else {
-    answerABtn.style.display = 'none'; 
+    answerABtn.style.display = 'none';
+     
 }
 
 
