@@ -31,10 +31,12 @@ if (questionData.answerA) {
         
         // If there is a linkA property, navigate the browser to that URL
         if (questionData.linkA) {
-            let target = question.linkA;
+            let target = questionData.linkA;
 
-            if (!target.startsWith("https")) {
-                target = "../data" + target; 
+                // If socData uses just "results.html?category=Adopt", keep it
+    // If someone accidentally adds http://, it still works
+            if (!target.startsWith("http")) {
+                target = target;
             }
             window.location.href = target;
         } else {
@@ -54,10 +56,10 @@ if (questionData.answerB) {
     answerBBtn.innerHTML = answerHTML;
     answerBBtn.onclick = () => {
         if (questionData.linkB) {
-            let target = question.linkB;
+            let target = questionData.linkB;
 
-            if (!target.startsWith("https")) {
-                target = "../data" + target; 
+            if (!target.startsWith("http")) {
+                target = target;
             }
             window.location.href = target;
         } else {
