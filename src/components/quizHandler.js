@@ -33,8 +33,8 @@ if (questionData.answerA) {
         if (questionData.linkA) {
             let target = question.linkA;
 
-            if (!target.startsWith("http")) {
-                target = "../pages" + target; 
+            if (!target.startsWith("https")) {
+                target = "../data" + target; 
             }
             window.location.href = target;
         } else {
@@ -56,8 +56,8 @@ if (questionData.answerB) {
         if (questionData.linkB) {
             let target = question.linkB;
 
-            if (!target.startsWith("http")) {
-                target = "../pages" + target; 
+            if (!target.startsWith("https")) {
+                target = "../data" + target; 
             }
             window.location.href = target;
         } else {
