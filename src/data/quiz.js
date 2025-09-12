@@ -21,20 +21,20 @@ const socData = [
         question: "You're most in your element when you're…",
         id: 2,
         answerA: "On stage, in motion, or performing with a crowd",
-        linkA: "../data/results.html?category=Active",
+        linkA: "results.html?category=Active",
         answerB: "Pushing yourself physically, on a team, training, or competing",
-        linkB: "../data/results.html?category=Sports",
+        linkB: "results.html?category=Sports",
     },
     {
         question: "What kind of people do you hope to meet?",
         id: 3,
         answerA: "Passionate creators/students that are into gaming, media, film, photography, podcasting",
-        linkA: "../data/results.html?category=General",
+        linkA: "results.html?category=General",
         answerB: "People who share niche interests or quirky hobbies",
         linkB: "https://www.bcusu.com/get-involved/start-a-society/",
     },
 
-    // Growth and purpose path questions
+    // Growth and purpose path questions //
     {
         question: "What sounds more exciting right now?",
         id: 4,
@@ -47,16 +47,16 @@ const socData = [
         question: "What would benefit you most in a society?",
         id: 5,
         answerA: "Course specific events, academic help, or career networking",
-        linkA: "../data/results.html?category=Academic",
+        linkA: "results.html?category=Academic",
         answerB: "Use your skills to inspire others and make change",
-        linkB: "../data/results.html?category=Liberation",
+        linkB: "results.html?category=Liberation",
     },
     {
         question: "What kind of community do you want to be part of?",
         id: 6,
         answerA: "A space to connect over shared heritage, background, or faith",
-        linkA: "../data/results.html?category=Faith",
+        linkA: "results.html?category=Faith",
         answerB: "I dont't know yet, still figuring it out",
-        linkB: "../data/results.html?category=Adopt",
+        linkB: "results.html?category=Adopt",
     },
 ]
