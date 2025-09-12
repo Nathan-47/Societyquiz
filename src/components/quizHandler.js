@@ -31,18 +31,13 @@ if (questionData.answerA) {
         
         // If there is a linkA property, navigate the browser to that URL
         if (questionData.linkA) {
-            let target = question.linkA;
-
-            if (!target.startsWith("http")) {
-                target = "../data/" + target; 
-            }
-            window.location.href = target;
+            window.location.href = questionData.linkA;
         } else {
             handleAnswer(questionData.idNextQuestionA);
         }
     };
 } else {
-    answerABtn.style.display = 'none'; 
+    answerABtn.style.display = 'none';
 }
 
 
@@ -53,12 +48,7 @@ if (questionData.answerB) {
     answerBBtn.innerHTML = answerHTML;
     answerBBtn.onclick = () => {
         if (questionData.linkB) {
-            let target = question.linkB;
-
-            if (!target.startsWith("http")) {
-                target = "../data/" + target; 
-            }
-            window.location.href = target;
+            window.location.href = questionData.linkB;
         } else {
             handleAnswer(questionData.idNextQuestionB);
         }
