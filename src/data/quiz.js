@@ -34,7 +34,7 @@ const socData = [
         linkB: "https://www.bcusu.com/get-involved/start-a-society/",
     },
 
-    // Growth and purpose path questions //
+    // Growth and purpose path questions
     {
         question: "What sounds more exciting right now?",
         id: 4,
