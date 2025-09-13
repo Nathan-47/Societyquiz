@@ -21,9 +21,9 @@ const socData = [
         question: "You're most in your element when you're…",
         id: 2,
         answerA: "On stage, in motion, or performing with a crowd",
-        linkA: "pages/results.html?category=Active",
+        linkA: "results.html?category=Active",
         answerB: "Pushing yourself physically, on a team, training, or competing",
-        linkB: "pages/results.html?category=Sports",
+        linkB: "results.html?category=Sports",
     },
     {
         question: "What kind of people do you hope to meet?",
@@ -49,7 +49,7 @@ const socData = [
         answerA: "Course specific events, academic help, or career networking",
         linkA: "results.html?category=Academic",
         answerB: "Use your skills to inspire others and make change",
-        linkB: "pages/results.html?category=Liberation",
+        linkB: "results.html?category=Liberation",
     },
     {
         question: "What kind of community do you want to be part of?",
@@ -57,6 +57,6 @@ const socData = [
         answerA: "A space to connect over shared heritage, background, or faith",
         linkA: "results.html?category=Faith",
         answerB: "I dont't know yet, still figuring it out",
-        linkB: "pages/results.html?category=Adopt",
+        linkB: "results.html?category=Adopt",
     },
 ]
