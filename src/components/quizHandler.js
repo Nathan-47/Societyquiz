@@ -35,7 +35,7 @@ if (questionData.answerA) {
 
                 // If socData uses just "results.html?category=Adopt", keep it
     // If someone accidentally adds http://, it still works
-            if (!target.startsWith("http")) {
+            if (target.includes("results")) {
                 target = target;
             }
             window.location.href = target;
@@ -58,7 +58,7 @@ if (questionData.answerB) {
         if (questionData.linkB) {
             let target = questionData.linkB;
 
-            if (!target.startsWith("http")) {
+            if (target.includes("results")) {
                 target = target;
             }
             window.location.href = target;
