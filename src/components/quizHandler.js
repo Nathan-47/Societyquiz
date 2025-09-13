@@ -33,8 +33,7 @@ if (questionData.answerA) {
         if (questionData.linkA) {
             let target = questionData.linkA;
 
-                // If socData uses just "results.html?category=Adopt", keep it
-    // If someone accidentally adds http://, it still works
+                // If socData uses just "results.html?category=Adopt", then keep the same as original answerLink
             if (target.includes("results")) {
                 target = target;
             }
