@@ -26,48 +26,67 @@
         <h1 class="society-heading"></h1>
         <a class="quiz-restart" href="https://nathan-47.github.io/Societyquiz/">Restart Quiz</a>
       </div>
-      <div class="society-grid" id="societies"></div >
+
+      
+      <div id="societies" class="society-grid" ></div>
     </div>
 </div>
 
 <!-- comment test for new branch -->
 
 <!-- import script to display society data  -->
-<script src="../data/societyData.js"></script>
+<!-- <script src="../data/societyData.js"></script> -->
+<!-- <script src="../data/apiData.js"></script> -->
 
 <script>
+  // Fetch data from BCUSU API
+  async function getData() {
+    const res = await fetch(
+      'https://www.bcusu.com/svc/feeds/groups/6007/?subtree=true&types=SOC'
+    );
+    const data = await res.json();
+    return data;
+  }
+
   function getGrid(category, containerId) {
     const container = document.getElementById(containerId);
-    const societies = societyData[category];
 
-    if (!societies || societies.length === 0) {
-      container.innerHTML = "<p>Oh no, there are no societies to be found!</p>";
-      return;
+    getData().then(data => {
+      const societies = data;
+      const findHead = document.querySelector(".start-wrapper h1").textContent;
+      const findHeadFinal = findHead;
+      console.log(findHeadFinal);
+      
+      const findSoc = societies.filter(soc => soc.Category === findHeadFinal);
+      
+      if (findSoc.length > 0) {
+        findSoc.forEach(soc => {
+          const card = document.createElement("div");
+          card.className = "society-card";
+          card.innerHTML = `
+          <h3>${soc.Name}</h3>
+          <img src="${soc.ImageUrl}" alt="${soc.Name} logo">
+          <a href="${soc.Url}" class="btn">View Society</a>
+          `;
+          container.appendChild(card);
+        });
+      } else {
+        container.innerHTML = "<p>No societies available in this category.</p>";
     }
-
-    // Create each society card from societyData JSON
-    societies.forEach(soc => {
-      const card = document.createElement("div");
-      card.className = "society-card";
-      card.innerHTML = `
-        <h3>${soc.name}</h3>
-        <img src="${soc.img}" alt="${soc.alt}"/>
-        <a href="${soc.link}" class="btn">View Society</a>
-      `;
-      container.appendChild(card);
     });
   }
 
-  // Get category from URL
+  // Read category from URL (?category=Creative)
   const urlParams = new URLSearchParams(window.location.search);
-  const category = urlParams.get('category');
+  const category = urlParams.get("category");
 
-  // Set heading
-  document.querySelector('.start-wrapper h1').textContent = `${category} Societies`;
+  document.querySelector(".start-wrapper h1").textContent =
+    `${category}`;
 
-  // Load societies
+  // Load the societies into the grid
   getGrid(category, "societies");
 </script>
+
 </body>
 </html>
 
