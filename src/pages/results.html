@@ -64,6 +64,11 @@
           const findHead =
             document.querySelector(".start-wrapper h1").textContent;
           const findHeadFinal = findHead;
+
+          // Change protected heading from API to vLiberation which is the updated version on BCUSU website.
+          if(findHeadFinal === "Protected") {
+            document.querySelector(".start-wrapper h1").textContent = "Liberation";
+          }
           // console.log(findHeadFinal);
           // console.log(societies);
 
@@ -90,6 +95,7 @@
           }
         });
       }
+
 
       const urlParams = new URLSearchParams(window.location.search);
       const category = urlParams.get("category");
