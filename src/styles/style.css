@@ -128,9 +128,10 @@ select:focus-visible {
   font-family: "poppins";
 }
 .society-card img {
-  width: 60px;
-  height: 60px;
-  margin: 10px auto;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 10px auto;
 }
 .society-card a {
   font-weight: 600;
