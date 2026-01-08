@@ -69,13 +69,10 @@
           if(findHeadFinal === "Protected") {
             document.querySelector(".start-wrapper h1").textContent = "Liberation";
           }
-          // console.log(findHeadFinal);
-          // console.log(societies);
 
           const findSoc = societies.filter(
             (soc) => soc.Category === findHeadFinal
           );
-          // console.log(findSoc);
 
           if (findSoc.length > 0) {
             findSoc.sort((a, b) => a.Name.localeCompare(b.Name));
