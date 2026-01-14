@@ -38,25 +38,38 @@
           >
         </div>
 
+        <div id="loading">Loading...</div>
         <div id="societies" class="society-grid"></div>
       </div>
     </div>
 
     <!-- back to top button -->
-     <a href="#" class="top">↑ Top</a>
+    <a href="#" class="top">↑ Top</a>
 
     <script>
+      let isLoading = false;
+      const loadingEl = document.getElementById("loading");
+
+      function loadingState(state) {
+        isLoading = state;
+        loadingEl.style.display = isLoading ? "block" : "none";
+      }
+
       // Fetch data from MSL BCUSU API
       async function getData() {
-        const res = await fetch(
-          "https://www.bcusu.com/svc/feeds/groups/6007/?subtree=true&types=SOC"
-        );
-
-        if (!res.ok) {
-          throw new Error(`Request failed with status ${res.status}`);
+        try {
+          loadingState(true);
+          const res = await fetch(
+            "https://www.bcusu.com/svc/feeds/groups/6007/?subtree=true&types=SOC"
+          );
+          if (!res.ok) {
+            throw new Error(`Request failed with status ${res.status}`);
+          }
+          const data = await res.json();
+          return data;
+        } finally {
+          loadingState(false);
         }
-        const data = await res.json();
-        return data;
       }
 
       function getGrid(category, containerId) {
@@ -69,8 +82,9 @@
           const findHeadFinal = findHead;
 
           // Change protected heading from API to vLiberation which is the updated version on BCUSU website.
-          if(findHeadFinal === "Protected") {
-            document.querySelector(".start-wrapper h1").textContent = "Liberation";
+          if (findHeadFinal === "Protected") {
+            document.querySelector(".start-wrapper h1").textContent =
+              "Liberation";
           }
 
           const findSoc = societies.filter(
@@ -95,7 +109,6 @@
           }
         });
       }
-
 
       const urlParams = new URLSearchParams(window.location.search);
       const category = urlParams.get("category");
