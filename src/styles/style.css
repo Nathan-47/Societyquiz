@@ -66,6 +66,11 @@ select:focus-visible {
   margin-bottom: 1em;
   margin-top: 1.5em;
 }
+#loading {
+  display: none;
+  font-weight: bold;
+  color: #292929;
+}
 
 .top {
 --offset: 50px;
@@ -111,7 +116,9 @@ border-radius: 100px;
   /* font-weight: 700; */
 }
 #answerABtn:hover,
-#answerBBtn:hover {
+#answerBBtn:hover,
+#answerABtn:focus,
+#answerBBtn:focus {
   background: none;
   color: #292929;
   border: 2px solid #292929;
@@ -156,8 +163,13 @@ border-radius: 100px;
   background: #fff793;
   margin-top: 1em;
 }
+.society-card a:hover,
+.society-card a:focus {
+  background: none;
+  border: 1px solid #292929
+}
 
-/* resutls */
+/* results */
 .quiz-restart {
   margin-bottom: 3em;
   padding: 5px;
