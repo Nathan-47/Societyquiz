@@ -3,7 +3,7 @@ const socData = [
     question: "What's your biggest reason for joining a student society?",
     id: 0,
     answerA:
-      "I want to enjoy uni life beyond lectures—fun, creativity, connection.",
+      "I want to enjoy uni life beyond lectures, having fun, being creative, and feel connection with others.",
     idNextQuestionA: 1,
     answerB: "I want to grow academically, socially, or personally.",
     idNextQuestionB: 4,
