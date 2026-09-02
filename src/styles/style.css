@@ -304,7 +304,6 @@ a {
   text-decoration: 1px solid #f4aa82 underline;
   display: flex;
   width: 100%;
-  box-shadow: 3px 3px;
   margin: 5px auto;
   margin-top: 1em;
   justify-content: center;
@@ -312,15 +311,17 @@ a {
   cursor: pointer;
   border: 2px solid #292929;
   font-family: "Poppins", sans-serif;
+  transform: translateY(0);
+  transition: transform .3s cubic-bezier(.5, 2.5, .7, .7),
+              box-shadow .3s cubic-bezier(.5, 2.5, .7, .7);
 }
 
 #startBtn:hover {
-  background: #f4aa82;
+  background: #F4AA82;
   color: #292929;
-  transition: 0.2s;
-  box-shadow: 0px 0px;
   border: 1px solid #292929;
-  transform: translateY(2px) !important;
+  box-shadow: 0 6px 0 0 #292929;
+  transform: translateY(-6px);
 }
 
 /* mobile and tablet screens */
