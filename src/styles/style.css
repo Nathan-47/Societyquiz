@@ -309,7 +309,7 @@ a {
   justify-content: center;
   font-weight: 800;
   cursor: pointer;
-  border: 2px solid #292929;
+  border: 0px solid #292929;
   font-family: "Poppins", sans-serif;
   transform: translateY(0);
   transition: transform .3s cubic-bezier(.5, 2.5, .7, .7),
@@ -319,7 +319,6 @@ a {
 #startBtn:hover {
   background: #F4AA82;
   color: #292929;
-  border: 1px solid #292929;
   box-shadow: 0 6px 0 0 #292929;
   transform: translateY(-6px);
 }
